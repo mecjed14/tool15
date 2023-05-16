@@ -1,0 +1,10 @@
+{
+  "Id": "5222a8fa-82c1-433a-82f5-772bbf5ce54d",
+  "IssueId": "PBUZIOT-0",
+  "Prefix": "Added",
+  "Text": "Add new parameter to push and create tag after release",
+  "CreatedAt": "2023-04-19T13:58:27.9412912Z",
+  "IsHotFix": false,
+  "CreatedBy": "JohannesBarta",
+  "FullChangeLogMessage": "Added: Add new parameter to push and create tag after release (PBUZIOT-0)"
+}

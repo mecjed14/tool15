@@ -1,0 +1,10 @@
+{
+  "Id": "60682eab-dd71-461b-b440-0c9c64b953ac",
+  "IssueId": "PBUZIOT-0",
+  "Prefix": "Changed",
+  "Text": "Refactoring of the whole tool",
+  "CreatedAt": "2023-04-19T13:58:58.8549579Z",
+  "IsHotFix": false,
+  "CreatedBy": "JohannesBarta",
+  "FullChangeLogMessage": "Changed: Refactoring of the whole tool (PBUZIOT-0)"
+}

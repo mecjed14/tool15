@@ -1,0 +1,31 @@
+default:
+  image: phiosglobalcr.azurecr.io/linux-build-runner:latest
+  tags:
+    - linux
+    - docker-runner
+
+workflow:
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "web"
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+    - if: $CI_MERGE_REQUEST_IID
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+    - if: $CI_COMMIT_TAG
+    - if: $CI_COMMIT_BRANCH && $CI_OPEN_MERGE_REQUESTS
+      when: never
+    - if: $CI_COMMIT_BRANCH
+
+variables:
+  GIT_DEPTH: 0
+
+stages:
+  - build
+  - deploy
+
+build:
+  stage: build
+  script:
+    - ./build.sh
+  artifacts:
+    paths:
+      - artifacts
